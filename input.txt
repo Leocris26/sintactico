@@ -1,0 +1,26 @@
+25
+S -> C
+C -> Y orr M orr e
+Y -> D G ; C
+M -> I ( A ) { Z } C
+I -> Identifier
+A -> K I B orr e
+K -> ent J orr cadena J orr marwin J orr decimal J orr I J
+J -> [ ] Ñ orr e
+Ñ -> [ ] orr e
+B -> , K I B orr e
+D -> K I
+G -> = Q orr e
+Z -> W G ; Z orr T Z orr e
+W -> ent J orr cadena J orr marwin J orr decimal J orr I J
+T -> si ( Q ) { Z } H orr mientras ( Q ) { Z } orr para ( O ; Q ; Q ) { Z }
+H -> sino { Z } orr osi ( Q ) { Z } H orr e
+O -> W G ,
+Q -> V QQ
+QQ -> Q1 orr Q2 orr Q3 orr Q4 orr e
+V -> Integer orr float orr string orr I N orr verdadero orr falso
+N -> . I N orr e
+Q1 -> * V orr / V
+Q2 -> + V orr - V
+Q3 -> ++
+Q4 -> == V orr = V orr >= V orr <= V orr < V orr > V orr | V orr & V

@@ -1,0 +1,6 @@
+5
+Integer Integer caract
+float float caract
+string string caract
+imaginary imaginary caract
+Identifier Identifier caract

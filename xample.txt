@@ -1,0 +1,8 @@
+marwin a = verdadero;
+ent b;
+hhh(){
+  a = falso;
+  si(a){
+    b++;
+   }
+}
