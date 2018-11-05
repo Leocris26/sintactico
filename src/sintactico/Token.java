@@ -27,7 +27,22 @@ public class Token {
 		this.caract=caract;
 	}
 	public void print(){
-		//System.out.println(caract+": "+ cadena + " "+x+" "+y);
+		if(caract.equals("string")||caract.equals("Integer")||caract.equals("float")) {
+			SimbolTable.add(new Simbol(caract,cadena,x,y));
+			SimbolTable.actual = "non";
+		}else if(caract.equals("Keyword")) {
+			if(cadena.equals("cadena")||cadena.equals("ent")||cadena.equals("decimal")||cadena.equals("marwin")) {
+				SimbolTable.actual = cadena;
+			}else if(cadena.equals("verdadero")||cadena.equals("falso")){
+				SimbolTable.add(new Simbol("marwin",cadena,x,y));
+				SimbolTable.actual = "non";
+			}else {
+				SimbolTable.actual = "non";
+			}
+		}else if(caract.equals("Identifier")) {
+			SimbolTable.add(new Simbol(SimbolTable.actual,cadena,x,y));
+			SimbolTable.actual = "non";
+		}
 		Code.push(new Tokenzz(x,y,cadena,caract));
 	}
 	public void verificar(){

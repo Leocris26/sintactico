@@ -1,8 +1,8 @@
-25
+26
 S -> C
 C -> Y orr M orr e
 Y -> D G ; C
-M -> I ( A ) { Z } C
+M -> I ( MC C
 I -> Identifier
 A -> K I B orr e
 K -> ent J orr cadena J orr marwin J orr decimal J orr I J
@@ -24,3 +24,4 @@ Q1 -> * V orr / V
 Q2 -> + V orr - V
 Q3 -> ++
 Q4 -> == V orr = V orr >= V orr <= V orr < V orr > V orr | V orr & V
+MC -> A ) { Z } orr Q ) ;

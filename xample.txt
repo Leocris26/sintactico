@@ -1,8 +1,9 @@
 marwin a = verdadero;
 ent b;
-hhh(){
+hhh(ent j){
   a = falso;
-  si(a){
-    b++;
+  si(a == j){
+    b = b++;
    }
 }
+hhh(23);

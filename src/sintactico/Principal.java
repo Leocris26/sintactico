@@ -165,9 +165,9 @@ public class Principal {
 		}
 		in.close();
 		Code.print();
-		
+		SimbolTable.printall();
 		//hasta aqui el lexico
-		
+		if(SimbolTable.estado && Code.estado) {
 		Terminales[] terminales = {new Terminales(";","cadena"),new Terminales("(","cadena"),new Terminales(")","cadena"),
 				new Terminales("{","cadena"),new Terminales("}","cadena"),new Terminales("[","cadena"),new Terminales("]","cadena"),
 				new Terminales(",","cadena"),new Terminales("=","cadena"),new Terminales("si","cadena"),new Terminales("mientras","cadena"),
@@ -185,7 +185,7 @@ public class Principal {
 				new Terminales("G","NT"),new Terminales("Z","NT"),new Terminales("W","NT"),new Terminales("T","NT"),
 				new Terminales("H","NT"),new Terminales("O","NT"),new Terminales("Q","NT"),new Terminales("QQ","NT"),
 				new Terminales("V","NT"),new Terminales("N","NT"),new Terminales("Q1","NT"),new Terminales("Q2","NT"),
-				new Terminales("Q3","NT"),new Terminales("Q4","NT")};
+				new Terminales("Q3","NT"),new Terminales("Q4","NT"),new Terminales("MC","NT")};
 		Iniciador init = new Iniciador();
 		HashMap<String, HashMap<String, String>> table = init.gettable();
 		HashMap<String, Terminales> map = new HashMap<String, Terminales>();
@@ -242,6 +242,7 @@ public class Principal {
 		cadenap.add(new Tokenzz(0,0,")","delimiter"));
 		prueba = new Verificador();
 		System.out.println(prueba.verificar(cadenap, matriz, inicial));*/
+		}
 	}
 
 }
