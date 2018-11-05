@@ -15,7 +15,7 @@ Z -> W G ; Z orr T Z orr e
 W -> ent J orr cadena J orr marwin J orr decimal J orr I J
 T -> si ( Q ) { Z } H orr mientras ( Q ) { Z } orr para ( O ; Q ; Q ) { Z }
 H -> sino { Z } orr osi ( Q ) { Z } H orr e
-O -> W G ,
+O -> W I G
 Q -> V QQ
 QQ -> Q1 orr Q2 orr Q3 orr Q4 orr e
 V -> Integer orr float orr string orr I N orr verdadero orr falso

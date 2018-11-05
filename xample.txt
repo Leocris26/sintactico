@@ -5,5 +5,7 @@ hhh(ent j){
   si(a == j){
     b = b++;
    }
+   para (ent i=0; i<7; i++){
+   }
 }
 hhh(23);
