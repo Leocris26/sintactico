@@ -185,7 +185,8 @@ public class Principal {
 				new Terminales("G","NT"),new Terminales("Z","NT"),new Terminales("W","NT"),new Terminales("T","NT"),
 				new Terminales("H","NT"),new Terminales("O","NT"),new Terminales("Q","NT"),new Terminales("QQ","NT"),
 				new Terminales("V","NT"),new Terminales("N","NT"),new Terminales("Q1","NT"),new Terminales("Q2","NT"),
-				new Terminales("Q3","NT"),new Terminales("Q4","NT"),new Terminales("MC","NT"),new Terminales("CC","NT")};
+				new Terminales("Q3","NT"),new Terminales("Q4","NT"),new Terminales("MC","NT"),new Terminales("CC","NT"),
+				new Terminales("LL","NT")};
 		Iniciador init = new Iniciador();
 		HashMap<String, HashMap<String, String>> table = init.gettable();
 		HashMap<String, Terminales> map = new HashMap<String, Terminales>();

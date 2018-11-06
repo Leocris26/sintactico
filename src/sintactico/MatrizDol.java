@@ -4,14 +4,11 @@ public class MatrizDol {
 	public static int verificar(char ant,String palabra,int x, int y,int c, String pal) {
 		String antp = palabra;
 		String[][] car= {
-				{"+=","D","2"}, {"->","D","2"},{"-=","D","2"},{"**","O","2"},{"*=","D","2"},
-				{"//","O","2"},{"/=","D","2"},{"%=","D","2"},{"@=","D","2"},{"<<","O","2"},
-				{"<=","O","2"},{">=","O","2"},{">>","O","2"},{"&=","D","2"},{"|=","D","2"},
-				{"^=","D","2"},{"!=","O","2"},{"==","O","2"},{"\\","E","1"},{"++","O","2"},
-				{"*","O","1"},{"/","O","1"},{"%","O","1"},{"<","O","1"},
-				{">","O","1"},{"&","O","1"},{"|","O","1"},{"^","O","1"},{"~","O","1"},{"=","D","1"},{"(","D","1"},
-				{")","D","1"},{"[","D","1"},{"]","D","1"},{"{","D","1"},{"}","D","1"},{",","D","1"},{":","D","1"},
-				{";","D","1"},{"@","O","1"},{"+","O","1"},{"-","O","1"},{".","D","1"}};
+				{"<=","O","2"},{">=","O","2"},{"==","O","2"},{"++","O","2"},
+				{"*","O","1"},{"/","O","1"},{"<","O","1"},{">","O","1"},{"&","O","1"},{"|","O","1"},
+				{"=","D","1"},{"(","D","1"},{")","D","1"},{"{","D","1"},
+				{"}","D","1"},{",","D","1"},{":","D","1"},
+				{";","D","1"},{"+","O","1"},{"-","O","1"},{".","D","1"}};
 		Token tok;
 		String caract="";
 		if(palabra.length()==3) {
@@ -32,7 +29,7 @@ public class MatrizDol {
 			palabra= palabra.substring(0, 2);
 		}
 		if(palabra.length()==2) {
-			for (int i = 0; i < 20; i++) {
+			for (int i = 0; i < 4; i++) {
 				if(palabra.equals(car[i][0])) {
 					if(car[i][1].equals("O"))caract="Operator";
 					else if(car[i][1].equals("D"))caract="Delimiter";
@@ -49,7 +46,7 @@ public class MatrizDol {
 			palabra= palabra.substring(0, 1);
 		}
 		if (palabra.length()==1) {
-			for (int i = 19; i < car.length-1; i++) {
+			for (int i = 4; i < car.length-1; i++) {
 				if(palabra.equals(car[i][0])) {
 					if(car[i][1].equals("O"))caract="Operator";
 					else if(car[i][1].equals("D"))caract="Delimiter";
@@ -68,8 +65,7 @@ public class MatrizDol {
 		return 0;
 	}
 	public static boolean palabrares(String cadena){
-		String[] car = {"falso","clase","retorno","para","intentar",
-		"verdadero","mientras","and","osi","si","or","sino","importar","terminar","ent","decimal","marwin","car","cadena","publico","privado"};
+		String[] car = {"falso","para","verdadero","mientras","osi","si","sino","ent","decimal","marwin","cadena"};
 		for (int i = 0; i < car.length; i++) {
 			if (cadena.equals(car[i]))return true;
 		}
