@@ -27,20 +27,27 @@ public class Token {
 		this.caract=caract;
 	}
 	public void print(){
-		if(caract.equals("string")||caract.equals("Integer")||caract.equals("float")) {
-			SimbolTable.add(new Simbol(caract,cadena,x,y));
+		if(caract.equals("string")) {
+			SimbolTable.add(new Simbol("cadena",cadena,x,y),false);
 			SimbolTable.actual = "non";
-		}else if(caract.equals("Keyword")) {
+		}else if(caract.equals("Integer")){
+			SimbolTable.add(new Simbol("ent",cadena,x,y),false);
+			SimbolTable.actual = "non";
+		}else if(caract.equals("float")) {
+			SimbolTable.add(new Simbol("decimal",cadena,x,y),false);
+			SimbolTable.actual = "non";
+		}
+		else if(caract.equals("Keyword")) {
 			if(cadena.equals("cadena")||cadena.equals("ent")||cadena.equals("decimal")||cadena.equals("marwin")) {
 				SimbolTable.actual = cadena;
 			}else if(cadena.equals("verdadero")||cadena.equals("falso")){
-				SimbolTable.add(new Simbol("marwin",cadena,x,y));
+				SimbolTable.add(new Simbol("marwin",cadena,x,y),false);
 				SimbolTable.actual = "non";
 			}else {
 				SimbolTable.actual = "non";
 			}
 		}else if(caract.equals("Identifier")) {
-			SimbolTable.add(new Simbol(SimbolTable.actual,cadena,x,y));
+			SimbolTable.add(new Simbol(SimbolTable.actual,cadena,x,y),true);
 			SimbolTable.actual = "non";
 		}
 		Code.push(new Tokenzz(x,y,cadena,caract));

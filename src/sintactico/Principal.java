@@ -164,8 +164,8 @@ public class Principal {
 			tok.verificar();
 		}
 		in.close();
-		Code.print();
-		SimbolTable.printall();
+		//Code.print();
+		//SimbolTable.printall();
 		//hasta aqui el lexico
 		if(SimbolTable.estado && Code.estado) {
 		Terminales[] terminales = {new Terminales(";","cadena"),new Terminales("(","cadena"),new Terminales(")","cadena"),
@@ -185,7 +185,7 @@ public class Principal {
 				new Terminales("G","NT"),new Terminales("Z","NT"),new Terminales("W","NT"),new Terminales("T","NT"),
 				new Terminales("H","NT"),new Terminales("O","NT"),new Terminales("Q","NT"),new Terminales("QQ","NT"),
 				new Terminales("V","NT"),new Terminales("N","NT"),new Terminales("Q1","NT"),new Terminales("Q2","NT"),
-				new Terminales("Q3","NT"),new Terminales("Q4","NT"),new Terminales("MC","NT")};
+				new Terminales("Q3","NT"),new Terminales("Q4","NT"),new Terminales("MC","NT"),new Terminales("CC","NT")};
 		Iniciador init = new Iniciador();
 		HashMap<String, HashMap<String, String>> table = init.gettable();
 		HashMap<String, Terminales> map = new HashMap<String, Terminales>();
@@ -210,39 +210,11 @@ public class Principal {
 		inicial.push(new Terminales("$","cadena"));
 		inicial.push(new Terminales("S","NT"));
 		ArrayList<Tokenzz> cadenap = Code.tokens;
-		/*cadenap.add(new Tokenzz(0,1,"marwin","Keyword"));
-		cadenap.add(new Tokenzz(0,2,"a","Identifier"));
-		cadenap.add(new Tokenzz(0,3,"=","delimiter"));
-		cadenap.add(new Tokenzz(0,4,"verdadero","Keyword"));
-		cadenap.add(new Tokenzz(0,4,";","delimiter"));
-		cadenap.add(new Tokenzz(0,5,"hhh","Identifier"));
-		cadenap.add(new Tokenzz(0,6,"(","delimiter"));
-		cadenap.add(new Tokenzz(0,7,")","delimiter"));
-		cadenap.add(new Tokenzz(0,8,"{","delimiter"));
-		cadenap.add(new Tokenzz(0,9,"a","Identifier"));
-		cadenap.add(new Tokenzz(0,10,"=","delimiter"));
-		cadenap.add(new Tokenzz(0,11,"falso","Keyword"));
-		cadenap.add(new Tokenzz(0,12,";","delimiter"));
-		cadenap.add(new Tokenzz(0,13,"}","delimiter"));
-		//cadenap.add(new Tokenzz(0,8,")","delimiter"));*/
 		Verificador prueba = new Verificador();
 		System.out.println(prueba.verificar(cadenap, matriz, inicial));
-		
-		
-		/*inicial=new Stack<Terminales>();
-		inicial.push(new Terminales("$","cadena"));
-		inicial.push(new Terminales("S","NT"));
-		cadenap = new ArrayList<Tokenzz>();
-		cadenap.add(new Tokenzz(0,0,"(","delimiter"));
-		cadenap.add(new Tokenzz(0,0,"(","delimiter"));
-		cadenap.add(new Tokenzz(0,0,"123","x"));
-		cadenap.add(new Tokenzz(0,0,")","delimiter"));
-		cadenap.add(new Tokenzz(0,0,";","delimiter"));
-		cadenap.add(new Tokenzz(0,0,"123","x"));
-		cadenap.add(new Tokenzz(0,0,")","delimiter"));
-		prueba = new Verificador();
-		System.out.println(prueba.verificar(cadenap, matriz, inicial));*/
+		//empieza el semantico
+		Filter filtro = new Filter();
+		filtro.filtrar();
 		}
 	}
-
 }

@@ -1,4 +1,4 @@
-26
+27
 S -> C
 C -> Y orr M orr e
 Y -> D G ; C
@@ -17,11 +17,12 @@ T -> si ( Q ) { Z } H orr mientras ( Q ) { Z } orr para ( O ; Q ; Q ) { Z }
 H -> sino { Z } orr osi ( Q ) { Z } H orr e
 O -> W I G
 Q -> V QQ
-QQ -> Q1 orr Q2 orr Q3 orr Q4 orr e
-V -> Integer orr float orr string orr I N orr verdadero orr falso
+QQ -> Q1 QQ orr Q2 QQ orr Q3 QQ orr Q4 QQ orr e
+V -> Integer orr float orr string orr I N orr verdadero orr falso orr ( Q )
 N -> . I N orr e
 Q1 -> * V orr / V
 Q2 -> + V orr - V
 Q3 -> ++
-Q4 -> == V orr = V orr >= V orr <= V orr < V orr > V orr | V orr & V
-MC -> A ) { Z } orr Q ) ;
+Q4 -> == V orr >= V orr <= V orr < V orr > V orr | V orr & V
+MC -> A ) { Z } orr Q CC ) ;
+CC -> , Q CC orr e

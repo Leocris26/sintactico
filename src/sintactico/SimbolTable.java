@@ -8,12 +8,14 @@ public final class SimbolTable {
 	public static String actual = "non";
 	public static ArrayList<Simbol> table = new ArrayList<Simbol>();
 	
-	public static void add(Simbol b) {
+	public static void add(Simbol b,boolean isID) {
+		boolean existeflag = existe(b.value);
 		if(existe(b.value)&&b.type.equals("non")) {
 			//aparicion.
-		}else if(existe(b.value)){
+		}else if(existeflag && isID){
 			System.out.println("error semantico: "+b.x+", "+b.y);
 			estado = false;
+		}else if(existeflag){
 		}else {
 			table.add(b);
 		}
@@ -32,5 +34,14 @@ public final class SimbolTable {
 			}
 		}
 		return false;
+	}
+	
+	public static int indice (String v) {
+		for (int i = 0; i < table.size(); i++) {
+			if(table.get(i).value.equals(v)) {
+				return i;
+			}
+		}
+		return -1;
 	}
 }

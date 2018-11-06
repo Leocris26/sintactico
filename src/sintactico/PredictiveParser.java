@@ -44,8 +44,8 @@ public class PredictiveParser {
                 }
                 table.put(currentAi,tempArray);
             }
-            System.out.print(currentAi+"");
-            System.out.println(table.get(currentAi));
+            //System.out.print(currentAi+"");
+            //System.out.println(table.get(currentAi));
         }
 
     }

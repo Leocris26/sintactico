@@ -1,11 +1,11 @@
 marwin a = verdadero;
 ent b;
-hhh(ent j){
-  a = falso;
+hhh(marwin j,ent y){
+  a = j;
   si(a == j){
-    b = b++;
+    b = b+((42/25)*(96-35));
    }
-   para (ent i=0; i<7; i++){
+   para (ent i=0; i<0; i++){
    }
 }
-hhh(23);
+hhh(falso,23);

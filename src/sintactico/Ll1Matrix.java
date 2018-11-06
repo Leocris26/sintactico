@@ -83,7 +83,7 @@ public class Ll1Matrix {
 				}
 			}
 		}
-		for (int i = 0; i < matrix.length; i++) {
+		/*for (int i = 0; i < matrix.length; i++) {
 			for (int k = 0; k < matrix[i].length; k++) {
 				if(matrix[i][k].existe) {
 					if(matrix[i][k].epsilon)
@@ -98,6 +98,6 @@ public class Ll1Matrix {
 				else System.out.print(" - ");
 			}
 			System.out.println();
-		}
+		}*/
 	}
 }

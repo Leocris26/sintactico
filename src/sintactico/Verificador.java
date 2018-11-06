@@ -21,14 +21,14 @@ public class Verificador {
 			cadena.push(cadenap.get(cadenap.size()-1-i));
 		}
 		while(!(cadena.peek().cadena.equals("$") && verificacion.peek().valor.equals("$")) && estado) {
-			for (int i = 0; i < verificacion.size(); i++) {
+			/*for (int i = 0; i < verificacion.size(); i++) {
 				System.out.print(verificacion.get(i).valor);
 			}
 			System.out.println();
 			for (int i = 0; i < cadena.size(); i++) {
 				System.out.print(cadena.get(i).cadena);
 			}
-			System.out.println();
+			System.out.println();*/
 			if(verificacion.peek().tipo.equals("NT")) {
 				int x = -1;
 				int y = -1;

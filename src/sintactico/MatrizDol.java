@@ -49,7 +49,7 @@ public class MatrizDol {
 			palabra= palabra.substring(0, 1);
 		}
 		if (palabra.length()==1) {
-			for (int i = 19; i < car.length-3; i++) {
+			for (int i = 19; i < car.length-1; i++) {
 				if(palabra.equals(car[i][0])) {
 					if(car[i][1].equals("O"))caract="Operator";
 					else if(car[i][1].equals("D"))caract="Delimiter";
