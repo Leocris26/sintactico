@@ -1,11 +1,16 @@
 marwin a = verdadero;
 ent b;
+decimal x = 0.0;
 hhh(marwin j,ent y){
   a = j;
   si(a == j){
     b = b+((42/25)*(96-35));
    }
+   mientras(25<89){
+     x=x++;
+   }
    para (ent i=0; i<0; i++){
+     x = x++;
    }
 }
 hhh(falso,23);

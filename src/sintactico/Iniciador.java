@@ -15,7 +15,7 @@ public class Iniciador {
         ArrayList<String> charList = new ArrayList<String>();
         Scanner scanner = null;
         try {
-            scanner = new Scanner(new File("input.txt"));
+            scanner = new Scanner(new File("grammar.txt"));
         } catch (FileNotFoundException e1) {
             e1.printStackTrace();
         }
